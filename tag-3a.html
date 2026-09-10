@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pazar Rota A (3. Gün) - Sultanahmet'ten Dolmabahçe & Beşiktaş'a | Google Maps Rotası</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0B1C2D;
+      color: #F7F3EA;
+      margin: 0;
+      padding: 20px 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: #FFFFFF;
+      color: #212529;
+      max-width: 480px;
+      width: 100%;
+      border-radius: 24px;
+      padding: 28px 22px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: #EBF4F6;
+      color: #397D92;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 6px;
+      color: #102A43;
+      font-weight: 800;
+    }
+    .h1-sub {
+      font-size: 14px;
+      color: #B6945C;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    p.subtitle {
+      font-size: 12px;
+      color: #627D98;
+      margin: 0 0 20px;
+      line-height: 1.45;
+    }
+    .status {
+      font-size: 13px;
+      color: #397D92;
+      font-weight: 600;
+      margin-bottom: 16px;
+      min-height: 20px;
+      background: #F0F4F8;
+      padding: 8px 12px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 18px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.1s ease, background 0.2s ease;
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .btn-google {
+      background: #102A43;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(16,42,67,0.35);
+    }
+    .btn-google:hover {
+      background: #243B53;
+    }
+    .btn-apple {
+      background: #F0F4F8;
+      color: #102A43;
+      border: 1px solid #D9E2EC;
+    }
+    .btn-web {
+      background: transparent;
+      color: #627D98;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: underline;
+      padding: 8px;
+      margin-top: 4px;
+    }
+    .stops {
+      text-align: left;
+      background: #F7F3EA;
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin: 20px 0 10px;
+      font-size: 12px;
+      color: #334E68;
+    }
+    .stops-title {
+      font-weight: 700;
+      color: #102A43;
+      margin-bottom: 8px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .stops ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .stops li {
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+    .footer-note {
+      font-size: 11px;
+      color: #829AB1;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Google Maps Canlı Rota / Live Route</div>
+    <h1>Sultanahmet'ten Dolmabahçe & Beşiktaş'a</h1>
+    <div class="h1-sub">Pazar Rota A (3. Gün) · Sonntag Route A (Tag 3)</div>
+    <p class="subtitle">Four-G Hotel → T1 Kabataş Tramvayı → Dolmabahçe Sarayı → Beşiktaş Dentur İskelesi</p>
+    
+    <div class="status" id="status-msg">
+      <span>Harita uygulaması başlatılıyor...</span>
+    </div>
+
+    <!-- Primary Button: Google Maps App -->
+    <a id="btn-google" href="https://www.google.com/maps/dir/?api=1&origin=Four-G+Hotel%2C+Istanbul&destination=Besiktas+Dentur+Iskele%2C+Istanbul&waypoints=Kabatas+Tram+Station%2C+Istanbul%7CDolmabahce+Palace%2C+Istanbul" class="btn btn-google">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      <span>Google Maps Uygulamasında Aç</span>
+    </a>
+
+    <!-- Secondary Button: Apple Maps for iOS -->
+    <a id="btn-apple" href="https://maps.apple.com/?saddr=Four-G+Hotel,+Istanbul&daddr=Besiktas+Dentur+Iskele,+Istanbul+to:Kabatas+Tram+Station,+Istanbul+to:Dolmabahce+Palace,+Istanbul&dirflg=w" class="btn btn-apple">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+        <line x1="9" y1="3" x2="9" y2="18"></line>
+        <line x1="15" y1="6" x2="15" y2="21"></line>
+      </svg>
+      <span>Apple Haritalar (iPhone)</span>
+    </a>
+
+    <!-- Fallback Button: Standard Browser -->
+    <a id="btn-web" href="https://www.google.com/maps/dir/?api=1&origin=Four-G+Hotel%2C+Istanbul&destination=Besiktas+Dentur+Iskele%2C+Istanbul&waypoints=Kabatas+Tram+Station%2C+Istanbul%7CDolmabahce+Palace%2C+Istanbul" target="_blank" rel="noopener noreferrer" class="btn btn-web">
+      Web Tarayıcısında Aç (Browser / Masaüstü)
+    </a>
+
+    <div class="stops">
+      <div class="stops-title">
+        <span>Duraklar / Etappen</span>
+        <span style="color:#B6945C; font-weight:600;">Eylül 2026</span>
+      </div>
+      <ol>
+        <li>Four-G Hotel, Sultanahmet (Başlangıç)</li><li>Kabataş Tramvay Durağı (T1 Son Durak)</li><li>Dolmabahçe Sarayı & Sahil Bahçesi</li><li>Beşiktaş Dentur İskelesi (13:55 Boğaz Turu Vapuru)</li>
+      </ol>
+    </div>
+
+    <div class="footer-note">
+      Four-G Hotel Sultanahmet · 75 Yaş Konforuna Uygun Düzayak Güzergah
+    </div>
+  </div>
+
+  <script>
+    var webUrl = "https://www.google.com/maps/dir/?api=1&origin=Four-G+Hotel%2C+Istanbul&destination=Besiktas+Dentur+Iskele%2C+Istanbul&waypoints=Kabatas+Tram+Station%2C+Istanbul%7CDolmabahce+Palace%2C+Istanbul";
+    var iosGoogleUrl = "comgooglemaps://?saddr=Four-G+Hotel,+Istanbul&daddr=Besiktas+Dentur+Iskele,+Istanbul+to:Kabatas+Tram+Station,+Istanbul+to:Dolmabahce+Palace,+Istanbul&directionsmode=walking";
+    var iosAppleUrl = "https://maps.apple.com/?saddr=Four-G+Hotel,+Istanbul&daddr=Besiktas+Dentur+Iskele,+Istanbul+to:Kabatas+Tram+Station,+Istanbul+to:Dolmabahce+Palace,+Istanbul&dirflg=w";
+    var androidIntent = "intent://maps.google.com/maps/dir/?api=1&origin=Four-G+Hotel,+Istanbul&destination=Besiktas+Dentur+Iskele,+Istanbul&waypoints=Kabatas+Tram+Station,+Istanbul|Dolmabahce+Palace,+Istanbul&travelmode=walking#Intent;scheme=https;package=com.google.android.apps.maps;end";
+
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+    var isAndroid = /android/i.test(ua);
+
+    var btnGoogle = document.getElementById('btn-google');
+    var btnApple = document.getElementById('btn-apple');
+    var btnWeb = document.getElementById('btn-web');
+    var statusMsg = document.getElementById('status-msg');
+
+    // Configure URLs and auto-launch
+    if (isAndroid) {
+      btnGoogle.href = androidIntent;
+      statusMsg.innerText = "Google Haritalar uygulaması açılıyor...";
+      // Auto-trigger Android intent
+      window.location.href = androidIntent;
+    } else if (isIOS) {
+      btnGoogle.href = iosGoogleUrl;
+      btnApple.style.display = 'flex';
+      statusMsg.innerText = "Google Maps uygulaması açılıyor...";
+      // Auto-trigger iOS Google Maps scheme
+      window.location.href = iosGoogleUrl;
+
+      setTimeout(function() {
+        statusMsg.innerText = "Uygulama açılmadıysa yukarıdaki mavi butona dokunun.";
+      }, 1800);
+    } else {
+      // Desktop
+      btnGoogle.href = webUrl;
+      btnGoogle.target = "_blank";
+      btnApple.style.display = 'none';
+      statusMsg.innerText = "Google Maps web sayfasına yönlendiriliyorsunuz...";
+      // Auto-redirect desktop
+      setTimeout(function() {
+        window.location.href = webUrl;
+      }, 500);
+    }
+
+    // Manual click handler
+    btnGoogle.addEventListener('click', function(e) {
+      if (isAndroid) {
+        window.location.href = androidIntent;
+      } else if (isIOS) {
+        window.location.href = iosGoogleUrl;
+        setTimeout(function() {
+          window.location.href = webUrl;
+        }, 1500);
+      } else {
+        window.open(webUrl, '_blank');
+      }
+    });
+  </script>
+</body>
+</html>
